@@ -57,4 +57,4 @@ document.getElementById('addBookForm').addEventListener('submit', function(e) {
     saqlash();
     alert("Kitob muvaffaqiyatli qo'shildi!");
     this.reset();
-}); 
+});

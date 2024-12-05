@@ -105,4 +105,4 @@ function excelMalumotlariniTayyorlash() {
         'Qidirilgan soni': kitob.qidirilganSoni || 0,
         'Oxirgi o\'zgartirilgan sana': kitob.oxirgiOzgartirilganSana || '-'
     }));
-} 
+}
