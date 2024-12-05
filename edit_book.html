@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitobni Tahrirlash - Kutubxona Boshqaruvi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="library_management.html">Bosh Sahifa</a></li>
+                <li><a href="add_book.html">Kitob Qo'shish</a></li>
+                <li><a href="edit_book.html" class="active">Kitobni Tahrirlash</a></li>
+                <li><a href="reports.html">Hisobotlar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Kitob Ma'lumotlarini Tahrirlash</h1>
+        <div class="search-section">
+            <input type="text" id="searchBook" placeholder="Kitob nomini kiriting">
+            <button onclick="searchForEdit()">Qidirish</button>
+        </div>
+        <div id="editForm" class="hidden">
+            <form id="bookEditForm">
+                <div class="form-group">
+                    <label for="bookTitle">Kitob nomi:</label>
+                    <input type="text" id="bookTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookAuthor">Muallif:</label>
+                    <input type="text" id="bookAuthor" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookPublisher">Nashriyot:</label>
+                    <input type="text" id="bookPublisher" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookYear">Nashr yili:</label>
+                    <input type="number" id="bookYear" required>
+                </div>
+                <div class="form-group">
+                    <label for="bookCount">Nusxalar soni:</label>
+                    <input type="number" id="bookCount" required>
+                </div>
+                <button type="submit">Saqlash</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kutubxona Boshqaruvi. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="edit_book.js"></script>
+</body>
+</html> 

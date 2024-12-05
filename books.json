@@ -1,0 +1,22 @@
+{
+    "kitoblar": [
+        {
+            "id": 1,
+            "nomi": "O'tkan kunlar",
+            "muallif": "Abdulla Qodiriy",
+            "nashriyot": "Sharq",
+            "yil": 2018,
+            "mavjud": true,
+            "soni": 5,
+            "kategoriya": "Roman",
+            "til": "O'zbek",
+            "ISBN": "978-9943-26-144-5",
+            "sahifalar": 400,
+            "olinganSana": null,
+            "qidirilganSoni": 0,
+            "oxirgiOzgartirilganSana": "2024-03-15"
+        }
+    ],
+    "foydalanuvchilar": [],
+    "hisobotlar": []
+} 

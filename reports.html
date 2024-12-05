@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisobotlar - Kutubxona Boshqaruvi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="library_management.html">Bosh Sahifa</a></li>
+                <li><a href="add_book.html">Kitob Qo'shish</a></li>
+                <li><a href="edit_book.html">Kitobni Tahrirlash</a></li>
+                <li><a href="reports.html" class="active">Hisobotlar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Hisobotlar</h1>
+        <div class="reports-section">
+            <div class="report-filters">
+                <select id="reportType">
+                    <option value="kunlik">Kunlik hisobot</option>
+                    <option value="oylik">Oylik hisobot</option>
+                    <option value="yillik">Yillik hisobot</option>
+                </select>
+                <input type="date" id="reportDate">
+                <button onclick="generateReport()">Hisobot yaratish</button>
+                <button onclick="excelgaExport()" class="excel-btn">
+                    <i class="fas fa-file-excel"></i> Excel ga yuklash
+                </button>
+            </div>
+            <div id="reportResults"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kutubxona Boshqaruvi. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="reports.js"></script>
+</body>
+</html> 

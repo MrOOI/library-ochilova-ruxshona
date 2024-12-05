@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kutubxona Boshqaruvi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="library_management.html" class="active">Bosh Sahifa</a></li>
+                <li><a href="add_book.html">Kitob Qo'shish</a></li>
+                <li><a href="edit_book.html">Kitobni Tahrirlash</a></li>
+                <li><a href="reports.html">Hisobotlar</a></li>
+            </ul>
+        </nav>
+        <h1>Kutubxona Boshqaruv Tizimiga Xush Kelibsiz</h1>
+        <p>Kitoblarni samarali tashkil qilishda sizning hamrohingiz</p>
+    </header>
+    <main>
+        <section id="features">
+            <h2>Imkoniyatlar</h2>
+            <ul>
+                <li>Kitob zaxirasini kuzatish</li>
+                <li>Kitoblarni qidirish</li>
+                <li>Kitob ma'lumotlarini yangilash</li>
+                <li>Hisobotlarni yaratish</li>
+            </ul>
+        </section>
+        <section id="demo">
+            <h2>Sinab Ko'ring</h2>
+            <div>
+                <label for="bookSearch">Kitob qidirish:</label>
+                <input type="text" id="bookSearch" placeholder="Kitob nomi yoki muallifini kiriting">
+                <button id="searchButton">Qidirish</button>
+            </div>
+            <div id="searchResults"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kutubxona Boshqaruvi. Barcha huquqlar himoyalangan.</p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
