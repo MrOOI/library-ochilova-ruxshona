@@ -1,43 +1,23 @@
-// Doimiy ma'lumotlar
-const defaultData = {
-    kitoblar: [
-        {
-            id: 1,
-            nomi: "O'tkan kunlar",
-            muallif: "Abdulla Qodiriy",
-            nashriyot: "Sharq",
-            yil: 2018,
-            mavjud: true,
-            soni: 5,
-            kategoriya: "Roman",
-            til: "O'zbek",
-            ISBN: "978-9943-26-144-5",
-            sahifalar: 400,
-            qidirilganSoni: 0,
-            oxirgiOzgartirilganSana: "2024-03-15"
-        },
-        // ... (barcha 20 ta kitob ma'lumotlari)
-    ],
+let kutubxonaData = {
+    kitoblar: [],
     foydalanuvchilar: [],
     hisobotlar: []
 };
 
-let kutubxonaData = JSON.parse(JSON.stringify(defaultData));
-
 // Ma'lumotlarni yuklash
 async function malumotlarniYuklash() {
     try {
-        const data = localStorage.getItem('kutubxonaData');
-        if (data) {
-            kutubxonaData = JSON.parse(data);
-        } else {
-            kutubxonaData = JSON.parse(JSON.stringify(defaultData));
-            saqlash();
+        const response = await fetch('books.json');
+        if (!response.ok) {
+            throw new Error('Ma\'lumotlarni yuklashda xatolik');
         }
-        return kutubxonaData;
+        const data = await response.json();
+        kutubxonaData = data;
+        saqlash();
+        return data;
     } catch (error) {
         console.error('Ma\'lumotlarni yuklashda xatolik:', error);
-        return defaultData;
+        return null;
     }
 }
 
@@ -50,9 +30,24 @@ function saqlash() {
     }
 }
 
+// LocalStorage'dan yuklash
+async function localStorageYuklash() {
+    try {
+        const data = localStorage.getItem('kutubxonaData');
+        if (data) {
+            kutubxonaData = JSON.parse(data);
+        } else {
+            await malumotlarniYuklash();
+        }
+    } catch (error) {
+        console.error('LocalStorage xatoligi:', error);
+        await malumotlarniYuklash();
+    }
+}
+
 // Dastur ishga tushganda ma'lumotlarni yuklash
 document.addEventListener('DOMContentLoaded', async function() {
-    await malumotlarniYuklash();
+    await localStorageYuklash();
 });
 
 // Kitoblarni qidirish
@@ -106,3 +101,18 @@ function excelMalumotlariniTayyorlash() {
         'Oxirgi o\'zgartirilgan sana': kitob.oxirgiOzgartirilganSana || '-'
     }));
 }
+
+// Excel faylini yaratish va yuklash
+function excelgaExport() {
+    const malumotlar = excelMalumotlariniTayyorlash();
+    const ws = XLSX.utils.json_to_sheet(malumotlar);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Kitoblar");
+    
+    // Fayl nomini yaratish
+    const sana = new Date().toISOString().split('T')[0];
+    const filename = `Kutubxona_hisobot_${sana}.xlsx`;
+    
+    // Excel faylini yuklash
+    XLSX.writeFile(wb, filename);
+} 

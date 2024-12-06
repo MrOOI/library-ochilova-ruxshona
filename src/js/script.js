@@ -1,5 +1,5 @@
 import { malumotlarniYuklash, qidirish } from './data.js';
-import '../css/styles.css';
+import '../css/style.css';
 
 // Sahifa yuklanganda ma'lumotlarni yuklash
 document.addEventListener('DOMContentLoaded', async function() {
