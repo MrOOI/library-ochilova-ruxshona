@@ -3,46 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kutubxona Boshqaruvi</title>
-    <link rel="stylesheet" href="./public/assets/css/style.css">
-    <link rel="icon" type="image/x-icon" href="./public/assets/img/favicon.ico">
+    <title>Mening Saytim</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="main-menu">
-            <ul>
-                <li><a href="./index.html" class="active">Bosh Sahifa</a></li>
-                <li><a href="./public/add_book.html">Kitob Qo'shish</a></li>
-                <li><a href="./public/edit_book.html">Kitobni Tahrirlash</a></li>
-                <li><a href="./public/reports.html">Hisobotlar</a></li>
-            </ul>
-        </nav>
-        <h1>Kutubxona Boshqaruv Tizimiga Xush Kelibsiz</h1>
-        <p>Kitoblarni samarali tashkil qilishda sizning hamrohingiz</p>
-    </header>
-    <main>
-        <section id="features">
-            <h2>Imkoniyatlar</h2>
-            <ul>
-                <li>Kitob zaxirasini kuzatish</li>
-                <li>Kitoblarni qidirish</li>
-                <li>Kitob ma'lumotlarini yangilash</li>
-                <li>Hisobotlarni yaratish</li>
-            </ul>
-        </section>
-        <section id="demo">
-            <h2>Sinab Ko'ring</h2>
-            <div>
-                <label for="bookSearch">Kitob qidirish:</label>
-                <input type="text" id="bookSearch" placeholder="Kitob nomi yoki muallifini kiriting">
-                <button id="searchButton">Qidirish</button>
+    <!-- Navigatsiya -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Kutubxona Boshqaruvi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html">Bosh Sahifa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./public/add_book.html">Kitob Qo'shish</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./public/edit_book.html">Kitobni Tahrirlash</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./public/reports.html">Hisobotlar</a>
+                    </li>
+                </ul>
             </div>
-            <div id="searchResults"></div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Kutubxona Boshqaruvi. Barcha huquqlar himoyalangan.</p>
-    </footer>
+        </div>
+    </nav>
+
+    <!-- Asosiy kontent -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Chap panel -->
+            <div class="col-lg-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">Kitob zaxirasini kuzatish</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kitoblarni qidirish</a>
+                    <a href="#" class="list-group-item list-group-item-action">Kitob ma'lumotlarini yangilash</a>
+                    <a href="#" class="list-group-item list-group-item-action">Hisobotlarni yaratish</a>
+                </div>
+
+                <!-- Qidiruv qismini qo'shamiz -->
+                <div class="mt-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Kitob qidirish</h5>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="bookSearch" placeholder="Kitob nomi yoki muallifi">
+                            </div>
+                            <button id="searchButton" class="btn btn-primary w-100">Qidirish</button>
+                        </div>
+                    </div>
+                    <div id="searchResults" class="mt-3"></div>
+                </div>
+            </div>
+            
+            <!-- O'rta qism -->
+            <div class="col-lg-9">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Kontent kartochkalari -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sarlavha 1</h5>
+                                <p class="card-text">Qisqacha ma'lumot...</p>
+                                <a href="#" class="btn btn-primary">Batafsil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Yana kartochkalar... -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sarlavha 2</h5>
+                                <p class="card-text">Qisqacha ma'lumot...</p>
+                                <a href="#" class="btn btn-primary">Batafsil</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sarlavha 3</h5>
+                                <p class="card-text">Qisqacha ma'lumot...</p>
+                                <a href="#" class="btn btn-primary">Batafsil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sahifalash -->
+                <nav class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Oldingi</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Keyingi</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JavaScript va Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <script src="./public/assets/js/data.js"></script>
     <script src="./public/assets/js/script.js"></script>
 </body>
