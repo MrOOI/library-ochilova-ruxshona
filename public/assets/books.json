@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "O'tkan kunlar",
+      "author": "Abdulla Qodiriy",
+      "year": 1926,
+      "image": "../assets/images/otkan-kunlar.jpg",
+      "shortDescription": "O'zbek adabiyotining eng mashhur romanlaridan biri. Otabek va Kumushning sevgi qissasi...",
+      "fullDescription": "O'zbek adabiyotining durdona asari bo'lgan ushbu roman XIX asr oxiridagi Qo'qon xonligi davridagi voqealarni tasvirlaydi. Bosh qahramonlar - Otabek va Kumushbibi o'rtasidagi sevgi tarixi, oilaviy munosabatlar, davr muammolari va qadriyatlar to'qnashuvi asarning asosini tashkil etadi.",
+      "pages": 400,
+      "publisher": "Sharq nashriyoti",
+      "category": "Badiiy adabiyot",
+      "language": "O'zbek",
+      "isbn": "9789943001234"
+    },
+    {
+      "id": 2,
+      "title": "Kecha va Kunduz",
+      "author": "Cho'lpon",
+      "year": 1936,
+      "image": "../assets/images/kecha-kunduz.jpg",
+      "shortDescription": "XX asr boshlaridagi o'zbek xalqi hayotini aks ettiruvchi roman...",
+      "fullDescription": "Cho'lponning eng yirik nasriy asari bo'lgan 'Kecha va kunduz' romani o'zbek xalqining XX asr boshlaridagi hayotini, ijtimoiy-siyosiy vaziyatni, ma'rifat va jaholat o'rtasidagi kurashni yorqin aks ettiradi. Zebining fojeali qismati orqali davr muammolari ochib berilgan.",
+      "pages": 320,
+      "publisher": "G'afur G'ulom nashriyoti",
+      "category": "Badiiy adabiyot",
+      "language": "O'zbek",
+      "isbn": "9789943001235"
+    },
+    {
+      "id": 3,
+      "title": "Sariq devni minib",
+      "author": "Xudoyberdi To'xtaboyev",
+      "year": 1968,
+      "image": "../assets/images/sariq-dev.jpg",
+      "shortDescription": "Bolalar adabiyotining eng sevimli asarlaridan biri, sarguzasht roman...",
+      "fullDescription": "Xudoyberdi To'xtaboyevning ushbu sarguzasht romani o'zbek bolalar adabiyotining eng sevimli asarlaridan biriga aylangan. Asarda Hoshimjon ismli bolaning g'aroyib sarguzashtlari, uning do'stlari bilan bo'lgan qiziqarli voqealari va kashfiyotlari tasvirlangan. Asar bolalarni do'stlik, mardlik va tadbirkorlikka o'rgatadi.",
+      "pages": 256,
+      "publisher": "Yangi asr avlodi",
+      "category": "Bolalar adabiyoti",
+      "language": "O'zbek",
+      "isbn": "9789943001236"
+    }
+  ]
+} 
